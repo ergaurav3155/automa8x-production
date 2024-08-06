@@ -1,4 +1,4 @@
-import ProfileForm from '@/components/forms/profileform'
+import ProfileForm from '@/components/forms/profile-form'
 import React from 'react'
 
 type Props = {}
@@ -17,7 +17,7 @@ function Setting({}: Props) {
                     Add or update your information
                 </p>
             </div>
-            <ProfileForm/>
+            <ProfileForm />
         </div>
     </div>
   )

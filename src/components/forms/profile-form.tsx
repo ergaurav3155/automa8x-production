@@ -22,9 +22,9 @@ type Props = {
   onUpdate?: any
 }
 
-const ProfileForm = ({ user, onUpdate }: Props) => {
+const ProfileForm = ({ user , onUpdate }: Props) => {
   const [isLoading, setIsLoading] = useState(false)
-  const form = useForm<z.infer<typeof EditUserProfileschema>>({
+  const form = useForm<z.infer<typeof EditUserProfileSchema>>({
     mode: 'onChange',
     resolver: zodResolver(EditUserProfileSchema),
     defaultValues: {
