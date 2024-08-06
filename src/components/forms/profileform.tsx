@@ -15,7 +15,7 @@ import {
 import { Input } from '../ui/input'
 import { Button } from '../ui/button'
 import { Loader2 } from 'lucide-react'
-import { EditUserProfileschema } from '@/lib/types'
+import { EditUserProfileSchema } from '@/lib/types'
 
 type Props = {
   user: any
