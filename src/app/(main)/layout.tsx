@@ -1,5 +1,5 @@
-import InfoBar from '@/components/infobar'
-import  Sidebar  from '@/components/sidebar/index'
+import InfoBar from '../../components/infobar'
+import  Sidebar  from '../../components/sidebar/index'
 import { Info } from 'lucide-react'
 
  
