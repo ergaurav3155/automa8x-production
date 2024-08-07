@@ -8,9 +8,19 @@ import { Button } from "../components/ui/button";
 import { clients, products } from "../lib/constant";
 import { CheckIcon, Divide } from "lucide-react";
 import Image from "next/image";
+import { PetraWallet } from "petra-plugin-wallet-adapter";
+import { AptosWalletAdapterProvider } from "@aptos-labs/wallet-adapter-react";
+import "@aptos-labs/wallet-adapter-ant-design/dist/index.css";
+import { Network } from "@aptos-labs/ts-sdk";
+import { WalletSelector } from "@aptos-labs/wallet-adapter-ant-design";
+const wallets = [
+  new PetraWallet()
+];
 
 export default function Home() {
+  const wallets = [new PetraWallet()];
   return (
+  <AptosWalletAdapterProvider plugins={wallets} autoConnect={true}>
     <main>
       <Navbar />
       <section className="h-screen w-full  bg-neutral-950 rounded-md  !overflow-visible relative flex flex-col items-center  antialiased">
@@ -200,5 +210,6 @@ export default function Home() {
         </div>
       </section>
     </main>
+  </AptosWalletAdapterProvider>
   );
 }
