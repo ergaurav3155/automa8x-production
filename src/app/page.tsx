@@ -1,3 +1,4 @@
+"use client";
 import { CardBody, CardContainer, CardItem } from "../components/global/3d-card";
 import { HeroParallax } from "../components/global/connect.parallax";
 import { ContainerScroll } from "../components/global/container-scroll-animation";
@@ -11,11 +12,6 @@ import Image from "next/image";
 import { PetraWallet } from "petra-plugin-wallet-adapter";
 import { AptosWalletAdapterProvider } from "@aptos-labs/wallet-adapter-react";
 import "@aptos-labs/wallet-adapter-ant-design/dist/index.css";
-import { Network } from "@aptos-labs/ts-sdk";
-import { WalletSelector } from "@aptos-labs/wallet-adapter-ant-design";
-const wallets = [
-  new PetraWallet()
-];
 
 export default function Home() {
   const wallets = [new PetraWallet()];
