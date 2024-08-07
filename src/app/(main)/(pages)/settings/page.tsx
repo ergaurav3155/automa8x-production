@@ -1,4 +1,4 @@
-import ProfileForm from '@/components/forms/profile-form'
+import ProfileForm from '../../../../components/forms/profile-form'
 import React from 'react'
 
 type Props = {}

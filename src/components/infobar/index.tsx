@@ -3,14 +3,14 @@ import React, { useEffect } from 'react'
 import { ModeToggle } from '../global/mode-toggle'
 import { Book, Headphones, Search } from 'lucide-react'
 import Templates from '../icons/cloud_download'
-import { Input } from '@/components/ui/input'
+import { Input } from '../ui/input'
 
 import {
   Tooltip,
   TooltipContent,
   TooltipProvider,
   TooltipTrigger,
-} from '@/components/ui/tooltip'
+} from '../ui/tooltip'
 
 type Props = {}
 
