@@ -4,6 +4,7 @@ import { useFuzzieStore } from '@/store'
 import React from 'react'
 import ContentBasedOnTitle from './content-based-on-title'
 
+
 type Props = {
   state: EditorState
   nodeConnection: ConnectionProviderProps
