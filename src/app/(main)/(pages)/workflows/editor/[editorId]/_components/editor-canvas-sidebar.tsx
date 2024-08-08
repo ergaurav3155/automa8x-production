@@ -19,12 +19,14 @@ import {
   Accordion,
   AccordionContent,
   AccordionItem,
-  AccordionTrigger,
+  AccordionTrigger, 
 } from '@/components/ui/accordion'
-import RenderConnectionAccordion from './render-connection-accordion'
+
 import RenderOutputAccordion from './render-output-accordian'
-import { useFuzzieStore } from '@/store'
+
 import { fetchBotSlackChannels, onConnections, onDragStart } from '@/lib/editor.utils'
+import RenderConnectionAccordion from './render-connection-accordion'
+import { useFuzzieStore } from '@/store'
 
 type Props = {
   nodes: EditorNodeType[]
