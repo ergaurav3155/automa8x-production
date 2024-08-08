@@ -12,13 +12,14 @@ import {
 } from '@/components/ui/card'
 import { Input } from '@/components/ui/input'
 
-import GoogleFileDetails from './google-file-details'
+
 import GoogleDriveFiles from './google-drive-files'
 import ActionButton from './action-button'
 import { getFileMetaData } from '@/app/(main)/(pages)/connections/_actions/google-connection'
 import axios from 'axios'
 import { toast } from 'sonner'
 import { onContentChange } from '@/lib/editor.utils'
+import GoogleFileDetails from './google-file-details'
 
 export interface Option {
   value: string
