@@ -1,0 +1,10 @@
+[package]
+name = "SubscriptionPayment"
+version = "0.1.0"
+authors = ["Your Name"]
+
+[addresses]
+subscription_payment = "0x92f57e26b6b6cb1c9e699c794cefb48bbb7c0267a7e4e2e397b2253c5b10dd51"
+
+[dependencies]
+AptosFramework = { git = "https://github.com/aptos-labs/aptos-core.git", subdir = "aptos-move/framework/aptos-framework/", rev = "main" }
