@@ -34,6 +34,9 @@ model User {
   Slack                 Slack[]
   connections           Connections[]
   workflows             Workflows[]
+  
+  // New Relations
+  GitHubAccount GitHubAccount?   // Relation to GitHubAccount
 }
 
 model LocalGoogleCredential {
@@ -104,6 +107,10 @@ model Connections {
   userId           String?
   Slack            Slack?          @relation(fields: [slackId], references: [id])
   slackId          String?
+  
+  // New Relations
+  GitHubAccount GitHubAccount? @relation(fields: [githubAccountId], references: [id])
+  githubAccountId String?
 }
 
 model Workflows {
@@ -124,4 +131,18 @@ model Workflows {
   description       String
   User              User     @relation(fields: [userId], references: [clerkId])
   userId            String
+}
+
+// New Model for GitHub Account Integration
+model GitHubAccount {
+  id              String   @id @default(uuid())
+  githubId        String   @unique // GitHub account ID
+  githubUsername  String   @unique // GitHub username
+  accessToken     String   @unique // OAuth access token
+
+  createdAt       DateTime @default(now())
+  updatedAt       DateTime @updatedAt
+
+  userId          Int      @unique
+  user            User     @relation(fields: [userId], references: [id])
 }
